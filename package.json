@@ -5,7 +5,7 @@
   "description": "Introducing our new food ordering app, Quick-Bite! With our user-friendly interface and vast selection of restaurants, ordering your next meal has never been easier. Simply search for your desired cuisine, browse menu items, and place your order with just a few taps.",
   "scripts": {
     "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "deploy":"gh-pages -d dist",
     "start": "parcel index.html",
     "build": "parcel build index.html",
     "test": "jest"
