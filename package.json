@@ -1,0 +1,31 @@
+{
+  "name": "quickbite",
+  "version": "1.0.0",
+  "description": "Introducing our new food ordering app, Quick-Bite! With our user-friendly interface and vast selection of restaurants, ordering your next meal has never been easier. Simply search for your desired cuisine, browse menu items, and place your order with just a few taps.",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aniketkasale/quick-bite.git"
+  },
+  "author": "Aniket Kasale",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aniketkasale/quick-bite/issues"
+  },
+  "homepage": "https://github.com/aniketkasale/quick-bite#readme",
+  "devDependencies": {
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "parcel": "^2.8.2",
+    "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.7.1",
+    "react-router-dom": "^6.7.0"
+  }
+}
