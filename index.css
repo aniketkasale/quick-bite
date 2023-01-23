@@ -152,6 +152,17 @@
 .media {
   height: 150px;
 }
+.about-us-shimmer{
+  height: 500px;
+  width: auto;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgb(253, 239, 239);
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem auto;
+}
 .p-32 {
   padding: 32px;
 }
