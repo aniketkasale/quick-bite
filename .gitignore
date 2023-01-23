@@ -46,3 +46,5 @@ Thumbs.db
 # parcel files
 .parcel-cache
 .cache
+# Local Netlify folder
+.netlify

@@ -1,11 +1,11 @@
 {
-  "homepage":"https://aniketkasale.github.io/quick-bite",
+  "homepage": "https://github.com/aniketkasale/quick-bite#readme",
   "name": "quickbite",
   "version": "1.0.0",
   "description": "Introducing our new food ordering app, Quick-Bite! With our user-friendly interface and vast selection of restaurants, ordering your next meal has never been easier. Simply search for your desired cuisine, browse menu items, and place your order with just a few taps.",
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d dist",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "start": "parcel index.html",
     "build": "parcel build index.html",
     "test": "jest"
@@ -19,7 +19,6 @@
   "bugs": {
     "url": "https://github.com/aniketkasale/quick-bite/issues"
   },
-  "homepage": "https://github.com/aniketkasale/quick-bite#readme",
   "devDependencies": {
     "babel-plugin-transform-remove-console": "^6.9.4",
     "gh-pages": "^5.0.0",
@@ -27,6 +26,7 @@
     "parcel-bundler": "^1.12.5"
   },
   "dependencies": {
+    "node-fetch": "^2.6.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
