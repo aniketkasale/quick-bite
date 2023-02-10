@@ -17,8 +17,9 @@ const Body = () => {
 
   return (
     <>
-      <div className="search-bar">
+      <div className="flex justify-center">
         <input
+          className="m-3 p-3 w-80 rounded-3xl"
           placeholder={"🔍 Search a restaurant you want..."}
           type="text"
           value={searchText}
@@ -29,7 +30,7 @@ const Body = () => {
           }}
         />
       </div>
-      <div className="app-body">
+      <div className="w-auto flex flex-wrap justify-center">
         {fileredData.length > 0 ? (
           fileredData?.map((restaurant) => {
             return (

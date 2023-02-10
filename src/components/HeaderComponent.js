@@ -9,47 +9,44 @@ import useNetwork from "../utils/useNetwork";
 const HeaderComponent = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const isOnline = useNetwork();
+  const navigationPages = [
+    { name: "Home", to: "/" },
+    { name: "About", to: "/about" },
+    { name: "Contact", to: "/contact-us" },
+  ];
   return (
     <>
-      <div className="header">
-        <div className="logo">
-          <img src={logo} alt="logo" />
+      <div className="mt-1 flex bg-orange-400 rounded-3xl shadow-md justify-between items-center">
+        <div>
+          <img className="pl-4 w-20" src={logo} alt="logo" />
         </div>
 
-        <div className="right-nav">
+        <div>
           {/* <img src={user} alt="logo" /> */}
-          <ul>
+          <ul className="pr-2 flex">
             {isLoggedIn && (
               <>
-                <li>
-                  <Link className="link" to={"/"}>
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link className="link" to={"/about"}>
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link className="link" to={"/contact-us"}>
-                    Contact
-                  </Link>
-                </li>
-                <li>
-                  <BsCart4 className="cart" />
+                {navigationPages.map((item) => {
+                  return (
+                    <li className="p-1 m-1 bg-orange-200 cursor-pointer rounded-md">
+                      <Link to={item.to}>{item.name}</Link>
+                    </li>
+                  );
+                })}
+                <li className="p-1 m-1 bg-orange-200 cursor-pointer rounded-md">
+                  <BsCart4 />
                 </li>
               </>
             )}
-            <li>
-              <button
-                className="auth-btn"
-                onClick={() => setIsLoggedIn(!isLoggedIn)}
-              >
+            <li className="p-1 m-1 bg-orange-200 cursor-pointer rounded-md">
+              <button onClick={() => setIsLoggedIn(!isLoggedIn)}>
                 {isLoggedIn ? "Logout" : "Login"}
               </button>
             </li>
-            <li style={{ color: isOnline ? "green" : "red" }}>
+            <li
+              className="p-1 m-1 bg-orange-200 cursor-pointer rounded-md"
+              style={{ color: isOnline ? "green" : "red" }}
+            >
               <RiRadioButtonLine style={{ top: "3px", position: "relative" }} />
             </li>
           </ul>

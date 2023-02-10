@@ -23,7 +23,9 @@
     "babel-plugin-transform-remove-console": "^6.9.4",
     "gh-pages": "^5.0.0",
     "parcel": "^2.8.2",
-    "parcel-bundler": "^1.12.5"
+    "parcel-bundler": "^1.12.5",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.6"
   },
   "dependencies": {
     "node-fetch": "^2.6.8",

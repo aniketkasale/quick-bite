@@ -14,13 +14,16 @@ const RestrauranatMenu = () => {
   }
 
   return (
-    <div className="restaurant-container">
-      <div className="restaurant-header">
+    <div>
+      <div className="items-center flex p-8 justify-around bg-orange-400 rounded-xl m-8">
         <div>
-          <img src={IMG_CDN_URL + restaurant?.cloudinaryImageId} />
+          <img
+            className="rounded-3xl h-40"
+            src={IMG_CDN_URL + restaurant?.cloudinaryImageId}
+          />
         </div>
-        <div>
-          <h1>{restaurant?.name}</h1>
+        <div className="space-y-1">
+          <h1 className="font-bold text-4xl">{restaurant?.name}</h1>
           <p>{restaurant?.cuisines?.join(", ")}</p>
           <p>
             {restaurant?.locality +
@@ -31,14 +34,14 @@ const RestrauranatMenu = () => {
           </p>
         </div>
         <div>
-          <p>
-            <AiFillStar /> {restaurant?.avgRating}
+          <p className="flex items-center">
+            <AiFillStar className="mr-1" /> {restaurant?.avgRating}
           </p>
           <p>{restaurant?.costForTwoMsg}</p>
           <p>{restaurant?.aggregatedDiscountInfo?.descriptionList[0]?.meta}</p>
         </div>
       </div>
-      <div className="app-body">
+      <div className="h-full w-auto flex flex-wrap justify-center">
         {Object.values(restaurant?.menu?.items).map((item) => {
           return <ItemCard {...item} key={item.id} />;
         })}

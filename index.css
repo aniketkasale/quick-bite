@@ -1,14 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.shimmerBG {
+  animation-duration: 2.2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: shimmer;
+  animation-timing-function: linear;
+  background: #ddd;
+  background: linear-gradient(to right, #f6f6f6 8%, #f0f0f0 18%, #f6f6f6 33%);
+  background-size: 1200px 100%;
+}
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   text-decoration: none;
 }
-/* .container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 98vh;
-} */
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -53,7 +62,7 @@
   cursor: pointer;
   background: #ffc08b;
 }
-.right-nav > ul > li > .link{
+.right-nav > ul > li > .link {
   color: #000;
   text-decoration: none;
 }
@@ -64,9 +73,8 @@
 }
 .logo img:hover {
   transform: scale(1.23);
-}
+} 
 .search-bar {
-  /* margin: 0 auto; */
   justify-content: center;
   display: flex;
 }
@@ -94,7 +102,7 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-.not-app-body{
+.not-app-body {
   height: 100%;
   width: auto;
   display: flex;
@@ -103,7 +111,7 @@
   margin: 2.5rem auto;
 }
 .card {
-    color: #000;
+  color: #000;
   width: 200px;
   border-radius: 5px;
   padding: 10px;
@@ -152,7 +160,7 @@
 .media {
   height: 150px;
 }
-.about-us-shimmer{
+.about-us-shimmer {
   height: 500px;
   width: auto;
   overflow: hidden;
@@ -185,21 +193,12 @@
   width: 40%;
 }
 
-.shimmerBG {
-  animation-duration: 2.2s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-  animation-name: shimmer;
-  animation-timing-function: linear;
-  background: #ddd;
-  background: linear-gradient(to right, #f6f6f6 8%, #f0f0f0 18%, #f6f6f6 33%);
-  background-size: 1200px 100%;
-}
+
 .m-t-24 {
   margin-top: 24px;
 }
 
-.restaurant-header{
+.restaurant-header {
   display: flex;
   padding: 2rem;
   justify-content: space-around;
@@ -208,13 +207,13 @@
   margin: 2rem;
 }
 
-.restaurant-header >div > img{
+.restaurant-header > div > img {
   border-radius: 20px;
   padding-left: 15px;
   height: 10rem;
 }
 
-.item-card{
+.item-card {
   width: 320px;
   border-radius: 5px;
   padding: 10px;
@@ -227,6 +226,6 @@
   width: 100%;
 }
 
-.no-network{
+.no-network {
   margin: 14.7rem 0px;
-}
+} */
