@@ -16,14 +16,8 @@ const HeaderComponent = () => {
   ];
   return (
     <>
-      <nav className="bg-teal-400 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+      <nav className="bg-orange-400 shadow-lg border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
-          <Link to={"/"} className="flex items-center">
-            <img src={logo} className="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
-            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-              QuickBite
-            </span>
-          </Link>
           <button
             data-collapse-toggle="navbar-default"
             type="button"
@@ -46,6 +40,24 @@ const HeaderComponent = () => {
               ></path>
             </svg>
           </button>
+          <Link to={"/"} className="flex items-center">
+            <img src={logo} className="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
+            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+              QuickBite
+            </span>
+          </Link>
+          <ul className="flex p-1 md:hidden mt-4 border border-gray-100 rounded-lg bg-gray-50  dark:bg-gray-800 dark:border-gray-700 items-center">
+            <li className="block md:hidden p-2 mr-2 text-white bg-blue-600 rounded dark:text-white">
+              <BsCart4 />
+            </li>
+            <li
+              className="block md:hidden p-2 text-white bg-blue-600 rounded dark:text-white"
+              style={{ color: isOnline ? "green" : "red" }}
+            >
+              <RiRadioButtonLine style={{ top: "3px", position: "relative" }} />
+            </li>
+          </ul>
+
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 items-center">
               {navigationPages.map((item) => {
@@ -53,23 +65,23 @@ const HeaderComponent = () => {
                   <li>
                     <Link
                       to={item.to}
-                      className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                      className="block py-2 pl-3 pr-4 mb-2 md:mb-0 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
                     >
                       {item.name}
                     </Link>
                   </li>
                 );
               })}
-              <li className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white">
+              <li className="md:block py-2 pl-3 hidden pr-4 mb-2 md:mb-0 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white">
                 <BsCart4 />
               </li>
-              <li className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white">
+              <li className="block py-2 pl-3 mb-2 md:mb-0 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white">
                 <button onClick={() => setIsLoggedIn(!isLoggedIn)}>
                   {isLoggedIn ? "Logout" : "Login"}
                 </button>
               </li>
               <li
-                className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                className="md:block py-2 pl-3 hidden md:mb-0 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
                 style={{ color: isOnline ? "green" : "red" }}
               >
                 <RiRadioButtonLine

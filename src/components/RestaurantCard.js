@@ -11,7 +11,7 @@ const RestaurantCard = ({ cloudinaryImageId, name, cuisines, avgRating }) => {
       />
       <h2 className="text-xl font-bold">{name}</h2>
       <p>{cuisines.join(", ")}</p>
-      <span className="bg-orange-200 w-fit p-1 text-sm font-semibold rounded-lg flex items-center">
+      <span className="bg-green-300 w-fit p-1 text-sm font-semibold rounded-lg flex items-center">
         <AiFillStar className="star mr-1" /> {avgRating} starts
       </span>
     </div>
